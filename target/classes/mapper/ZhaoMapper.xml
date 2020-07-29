@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.izumi.dao.ZhaoMapper" >
+
+    <resultMap id="BaseResultMap" type="org.izumi.model.Zhao" >
+        <result column="z_id" property="zId" jdbcType="INTEGER" />
+        <result column="z_name" property="zName" jdbcType="VARCHAR" />
+        <result column="z_money" property="zMoney" jdbcType="INTEGER" />
+    </resultMap>
+
+    <insert id="insert" parameterType="org.izumi.model.Zhao" >
+        insert into zhao (z_id, z_name, z_money
+            )
+        values (#{zId,jdbcType=INTEGER}, #{zName,jdbcType=VARCHAR}, #{zMoney,jdbcType=INTEGER}
+            )
+    </insert>
+
+    <insert id="insertSelective" parameterType="org.izumi.model.Zhao" >
+        insert into zhao
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="zId != null" >
+                z_id,
+            </if>
+            <if test="zName != null" >
+                z_name,
+            </if>
+            <if test="zMoney != null" >
+                z_money,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="zId != null" >
+                #{zId,jdbcType=INTEGER},
+            </if>
+            <if test="zName != null" >
+                #{zName,jdbcType=VARCHAR},
+            </if>
+            <if test="zMoney != null" >
+                #{zMoney,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+</mapper>
