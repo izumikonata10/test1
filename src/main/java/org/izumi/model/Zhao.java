@@ -2,9 +2,7 @@ package org.izumi.model;
 
 /**
  * 
- * 
- * @author wcyong
- * 
+ *
  * @date 2020-07-28
  */
 public class Zhao {
