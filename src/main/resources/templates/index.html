@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Title</title>
+    <style>
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
 <h1>hallo world</h1>
+<form action="/imgRAR" method="post" enctype="multipart/form-data">
+    压缩的程度（取值范围0-1）
+    <input type="text" name="qality"/>
+    <input type="file" name="file"/>
+    <input type="submit"/>
+</form>
+<img src="/img/1.jpg" alt="图片" onerror="this.src='/img/mor.jpg'"/>
+<!--<iframe src="https://www.baidu.com/" frameborder="0"></iframe>-->
 </body>
 </html>
