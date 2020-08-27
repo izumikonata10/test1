@@ -268,23 +268,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .fui-cross:before {
-  content: "\e609";
+  /*content: "\e609";*/
+    content: "x";
 }
 .fui-info-circle:before {
-  content: "\e60f";
+  /*content: "\e60f";*/
+    content: "关于";
 }
 .fui-photo:before {
-  content: "\e62a";
+  /*content: "\e62a";*/
+    content: "截图";
 }
 .fui-eye:before {
-  content: "\e62c";
+  /*content: "\e62c";*/
+    content: "模型";
 }
 .fui-chat:before {
-  content: "\e62d";
+  /*content: "\e62d";*/
+    content: "易言";
 }
 .fui-home:before {
-  content: "\e62e";
+  /*content: "\e62e";*/
+    content: "主页";
 }
 .fui-user:before {
-  content: "\e631";
+  /*content: "\e631";*/
+    content: "衣服";
 }
