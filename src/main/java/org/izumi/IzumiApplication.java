@@ -22,9 +22,9 @@ import javax.servlet.MultipartConfigElement;
 public class IzumiApplication {
     public MultipartConfigElement multipartConfigElement() {
         MultipartConfigFactory factory = new MultipartConfigFactory();
-        //  单个文件大小
+        //  设置单个文件大小
         factory.setMaxFileSize("50240KB");
-        /// 总上传文件大小
+        /// 设置总上传文件大小
         factory.setMaxRequestSize("202400KB");
         return factory.createMultipartConfig();
     }
