@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20646645-9f18-4a74-8399-159965bc623a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/izumi/model/ReturnCitySN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/izumi/IzumiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/izumi/IzumiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/izumi/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/izumi/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="20646645-9f18-4a74-8399-159965bc623a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="66" column="25" lean-forward="true" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+            <state relative-caret-position="265">
+              <caret line="120" column="47" selection-start-line="120" selection-start-column="47" selection-end-line="120" selection-end-column="47" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -86,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1520">
-              <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
+            <state relative-caret-position="434">
+              <caret line="86" column="28" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="28" />
             </state>
           </provider>
           <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
@@ -198,8 +188,8 @@
         <option value="$PROJECT_DIR$/src/main/java/org/izumi/controller/IndexController.java" />
         <option value="$PROJECT_DIR$/src/test/java/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/izumi/model/ReturnCitySN.java" />
-        <option value="$PROJECT_DIR$/ip.log" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/ip.log" />
       </list>
     </option>
   </component>
@@ -462,7 +452,7 @@
       <workItem from="1599784398423" duration="6757000" />
       <workItem from="1600305759685" duration="91000" />
       <workItem from="1600307535552" duration="28440000" />
-      <workItem from="1600762158658" duration="1143000" />
+      <workItem from="1600762158658" duration="2046000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1595982000933</created>
@@ -506,11 +496,18 @@
       <option name="project" value="LOCAL" />
       <updated>1598489606621</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="izumi_v1.23&#10;前端该怎么设计呢，我也不知道，写了个思路&#10;新增访问者ip获取">
+      <created>1600768975127</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1600768975127</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117384000" />
+    <option name="totallyTimeSpent" value="118287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -568,7 +565,8 @@
     <MESSAGE value="izumi_v1.2&#10;新增图片压缩工具类" />
     <MESSAGE value="izumi_v1.21&#10;新增live2d模型*2" />
     <MESSAGE value="izumi_v1.22&#10;live2d样式修改  按钮bug修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="izumi_v1.22&#10;live2d样式修改  按钮bug修复" />
+    <MESSAGE value="izumi_v1.23&#10;前端该怎么设计呢，我也不知道，写了个思路&#10;新增访问者ip获取" />
+    <option name="LAST_COMMIT_MESSAGE" value="izumi_v1.23&#10;前端该怎么设计呢，我也不知道，写了个思路&#10;新增访问者ip获取" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -780,14 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1520">
-          <caret line="80" column="28" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/izumi/model/ReturnCitySN.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -831,20 +821,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ip.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="114" selection-start-line="8" selection-start-column="114" selection-end-line="8" selection-end-column="114" />
+        <state relative-caret-position="413">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="66" column="25" lean-forward="true" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+        <state relative-caret-position="265">
+          <caret line="120" column="47" selection-start-line="120" selection-start-column="47" selection-end-line="120" selection-end-column="47" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="86" column="28" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="28" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
   </component>
   <component name="masterDetails">
