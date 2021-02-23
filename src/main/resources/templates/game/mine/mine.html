@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>扫雷</title>
+	<script type="text/javascript" src="js/game/mine/mine.js"></script>
+	<link rel="Stylesheet" type="text/css" href="css/game/mine/mine.css" />
+	<link rel="stylesheet" type="text/css" href="live2d/assets/waifu.min.css?v=1.4.2"/>
+	<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<h1>泉此方的springboot测试</h1>
+	<div class = "mine-wrap">
+		<div class = "title clearfix">
+			<div class="title-txt">扫雷</div>
+			<ul class="window-control">
+				<li class="window-min"></li>
+				<li class="window-max"></li>
+				<li class="window-close" onclick="window.close()"></li>
+			</ul>
+		</div>
+		<div class="mine-main clearfix">
+			<div class="mine-menu clearfix">
+				<ul class="mine-menu-ul clearfix">
+					<li class="menu-game">游戏
+						<ul class="menu-sub clearfix">
+							<li><span class="menu-sub-left"><input type="radio" name="mine-type" value ="0"/></span><span class="menu-sub-right">初级</span></li>
+							<li><span class="menu-sub-left"><input type="radio" name="mine-type" value ="1"/></span><span class="menu-sub-right">中级</span></li>
+							<li><span class="menu-sub-left"><input type="radio" name="mine-type" value ="2"/></span><span class="menu-sub-right">高级</span></li>
+							<li><span class="menu-sub-left"><input type="radio" name="mine-type" value ="3"/></span><span class="menu-sub-right">自定义</span></li>
+
+						</ul>
+					</li>
+					<li>帮助</li>
+				</ul>
+			</div>
+			<div class="mine-con">
+				<div class="game-tags clearfix">
+					<div class="game-tag-images">
+						<img src="img/game/mine/res/d0.bmp"/>
+						<img src="img/game/mine/res/d0.bmp"/>
+						<img src="img/game/mine/res/d0.bmp"/>
+					</div>
+					<div class="game-face">
+						<img src="img/game/mine/res/face_normal.bmp" onclick = "mine1.init()" id="face"/>
+					</div>
+					<div class="game-time-images">
+						<img src="img/game/mine/res/d0.bmp"/>
+						<img src="img/game/mine/res/d0.bmp"/>
+						<img src="img/game/mine/res/d0.bmp"/>
+					</div>
+				</div>
+				<div class="mine-canvas">
+					<canvas id="mine1" width="" height=""></canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 预加载图片资源 -->
+	<div class ="load-images">
+		<img src ="img/game/mine/res/blank.bmp" />
+		<img src ="img/game/mine/res/0.bmp" />
+		<img src ="img/game/mine/res/flag.bmp" />
+		<img src ="img/game/mine/res/ask.bmp" />
+		<img src ="img/game/mine/res/mine.bmp" />
+		<img src ="img/game/mine/res/blood.bmp" />
+		<img src ="img/game/mine/res/error.bmp" />
+		<img src ="img/game/mine/res/0.bmp" />
+		<img src ="img/game/mine/res/1.bmp" />
+		<img src ="img/game/mine/res/2.bmp" />
+		<img src ="img/game/mine/res/3.bmp" />
+		<img src ="img/game/mine/res/4.bmp" />
+		<img src ="img/game/mine/res/5.bmp" />
+		<img src ="img/game/mine/res/6.bmp" />
+		<img src ="img/game/mine/res/7.bmp" />
+		<img src ="img/game/mine/res/8.bmp" />
+	</div>
+
+	<!--<div class="about">-->
+		<!--<a href="http://blog.csdn.net/liusaint1992/article/details/50531186" target="_blank">简要说明</a>-->
+	<!--</div>-->
+
+	<script type="text/javascript">
+        /*<![CDATA[*/
+		var mine1;
+		window.onload = function(){
+
+			document.getElementsByClassName('mine-wrap')[0].style.display = "block";
+
+			mine1 = new Mine("mine1",'face',30,16,99,"game-tag-images","game-time-images");
+			mine1.init();
+
+			var inputEle = document.getElementsByTagName('input');
+
+			for (var i = 0; i < inputEle.length; i++) {
+				inputEle[i].onclick = function(){
+					var width,height,minenum;
+					if(this.value == 0){
+						width =9;height =9;minenum = 10;
+					}
+					else if(this.value == 1){
+						width =16;height =16;minenum = 40;
+					}
+					else if(this.value == 2){
+						width =30;height =16;minenum = 99;
+					}else if(this.value ==3){
+						width =prompt("请输入宽(9-30)");
+						height = width && prompt("请输入高(9-24)");
+						minenum = height && prompt("请输入雷的数量(10-200)");
+						if(!(width && height && minenum)){
+							return;
+						}
+						if(width<9){width = 9;}
+						if(width>30){width = 30;}
+						if(height<9){height = 9;}
+						if(height>24){height = 24;}
+						if(minenum<10){minenum = 10;}
+						if(minenum>200){minenum = 200;}
+						if(minenum>height * width){minenum =10;}
+					}
+					mine1.paneheight = height;//有几行
+					mine1.panewidth = width;//有几列
+					mine1.minenum = minenum;//有几个雷
+
+					mine1.init();
+					document.getElementsByClassName("mine-wrap")[0].style.width = width * mine1.PANE_SIZE + 25 + "px";
+				}
+			};
+
+		}
+        /*]]>*/
+	</script>
+<div style="position: absolute;right: 0px;
+    bottom: 0px;">
+	<div class="waifu">
+		<div class="waifu-tips"></div>
+		<canvas id="live2d" class="live2d"></canvas>
+		<div class="waifu-tool">
+			<span class="fui-home"></span>
+			<span class="fui-chat"></span>
+			<span class="fui-eye"></span>
+			<span class="fui-user"></span>
+			<span class="fui-photo"></span>
+			<span class="fui-info-circle"></span>
+			<span class="fui-cross"></span>
+		</div>
+	</div>
+</div>
+<!--<iframe src="https://www.baidu.com/" frameborder="0"></iframe>-->
+<script src="live2d/assets/waifu-tips.min.js?v=1.4.2"></script>
+<script src="live2d/assets/live2d.min.js?v=1.0.5"></script>
+<script type="text/javascript">
+    /* 可直接修改部分参数 */
+    live2d_settings['modelId'] = 1;                  // 默认模型 ID
+    live2d_settings['modelTexturesId'] = 87;         // 默认材质 ID
+    live2d_settings['canCloseLive2d']       = true;         // 显示 关闭看板娘  按钮，可选 true(真), false(假)
+    live2d_settings['canTurnToHomePage']    = false;         // 显示 返回首页    按钮，可选 true(真), false(假)
+    live2d_settings['canTurnToHomePage']    = false;         // 显示 返回首页    按钮，可选 true(真), false(假)
+    live2d_settings['canTurnToAboutPage']   = false;         // 显示 跳转关于页  按钮，可选 true(真), false(假)
+    live2d_settings['waifuSize'] = '300x267';        // 看板娘大小  600x535  400x356  300x267(网页大小)
+    live2d_settings['waifuTipsSize'] = '285x50';    // 提示框大小  570x150  300x100
+    live2d_settings['waifuFontSize'] = '13px';       // 提示框字体  30px  15px
+    live2d_settings['waifuEdgeSide'] = 'right:0';     // 看板娘贴边方向  right:30
+    live2d_settings['waifuToolFont'] = '36px';       // 工具栏字体
+    live2d_settings['waifuToolLine'] = '20px';       // 工具栏行高  50px
+    live2d_settings['waifuToolTop'] = '-30px';       // 工具栏顶部边距  -60px
+    live2d_settings['waifuDraggable'] = 'axis-x';    // 拖拽样式
+    live2d_settings['modelStorage']         = true;         // 记录模型 ID (刷新后恢复)，可选 true(真), false(假)
+    live2d_settings['modelRandMode']        = 'switch';     // 模型切换，可选 'rand'(随机), 'switch'(顺序)
+    live2d_settings['modelTexturesRandMode']= 'switch';       // 材质切换，可选 'rand'(随机), 'switch'(顺序)
+    /* 在 initModel 前添加 */
+    initModel("live2d/assets/waifu-tips.json?v=1.4.2")
+</script>
+	<script type="text/javascript">
+        $(document).ready(function(){
+            $.ajax({
+                type:'post',
+                url: "../ip",
+                data:JSON.stringify(window.returnCitySN),
+                contentType: 'application/json',
+                dataType : "json",
+                success: function (data) {}
+            })
+        })
+	</script>
+
+</body>
+</html>

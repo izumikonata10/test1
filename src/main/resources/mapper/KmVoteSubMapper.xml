@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.izumi.dao.KmVoteSubMapper" >
+
+    <resultMap id="BaseResultMap" type="org.izumi.model.KmVoteSub" >
+        <id column="fd_id" property="fdId" jdbcType="INTEGER" />
+        <result column="fd_answer" property="fdAnswer" jdbcType="LONGVARCHAR" />
+        <result column="fd_question_id" property="fdQuestionId" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        fd_id, fd_answer, fd_question_id
+    </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select 
+        <include refid="Base_Column_List" />
+        from km_vote_sub
+        where fd_id = #{fdId,jdbcType=INTEGER}
+    </select>
+
+    <select id="selectByQId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+        select t3.fd_id fd_id, t3.fd_answer fd_answer, t3.fd_question_id fd_question_id
+        from km_pindagate_main t1
+        LEFT JOIN km_vote_sub t3 on t1.fd_id = t3.fd_question_id
+        where t1.fd_id = #{fdQuestionId,jdbcType=VARCHAR}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from km_vote_sub
+        where fd_id = #{fdId,jdbcType=INTEGER}
+    </delete>
+
+    <insert id="insert" parameterType="org.izumi.model.KmVoteSub" >
+        insert into km_vote_sub (fd_id, fd_answer, fd_question_id
+            )
+        values (#{fdId,jdbcType=INTEGER}, #{fdAnswer,jdbcType=LONGVARCHAR}, #{fdQuestionId,jdbcType=VARCHAR}
+            )
+    </insert>
+
+    <insert id="insertSelective" parameterType="org.izumi.model.KmVoteSub" >
+        insert into km_vote_sub
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="fdId != null" >
+                fd_id,
+            </if>
+            <if test="fdAnswer != null" >
+                fd_answer,
+            </if>
+            <if test="fdQuestionId != null" >
+                fd_question_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="fdId != null" >
+                #{fdId,jdbcType=INTEGER},
+            </if>
+            <if test="fdAnswer != null" >
+                #{fdAnswer,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="fdQuestionId != null" >
+                #{fdQuestionId,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="org.izumi.model.KmVoteSub" >
+        update km_vote_sub
+        <set >
+            <if test="fdAnswer != null" >
+                fd_answer = #{fdAnswer,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="fdQuestionId != null" >
+                fd_question_id = #{fdQuestionId,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where fd_id = #{fdId,jdbcType=INTEGER}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="org.izumi.model.KmVoteSub" >
+        update km_vote_sub
+        set fd_answer = #{fdAnswer,jdbcType=LONGVARCHAR},
+            fd_question_id = #{fdQuestionId,jdbcType=VARCHAR}
+        where fd_id = #{fdId,jdbcType=INTEGER}
+    </update>
+</mapper>

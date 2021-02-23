@@ -1,0 +1,488 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="echarts/echarts.min.js"></script>
+    <script src="vue/vue.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+    <script src="vue/axios.min.js"></script>
+    <script src="vue/timer.js"></script>
+    <style type="text/css">
+        *{padding: 0; margin: 0; font-family: "Lato", sans-serif}
+        i{font-size: 14px}
+        body{/*background: #0d0d0d; color: #ffffff;*/color: #000}
+        div{font-size: 20px; text-align: center; padding-top: 15px;}
+        div span{display: inline-block; width: 50px; height: 50px;padding: 10px; border-radius: 5px}
+        p{font-size: 18px}
+        span.red{background: #ff0000}
+        span.yg{background: yellowgreen}
+        span.or{background: orange}
+        span.pi{background: palevioletred}
+        span.pk{background: #00a0e9}
+        span.mk{background: #1FADC5}
+        span p:first-child{font-size: 25px}
+        span p:last-child{font-size: 14px}
+        .button-giant {
+            font-size: 28px;
+            height: 70px;
+            line-height: 70px;
+            padding: 0 70px;
+        }
+        .button-pill {
+            border-radius: 200px;
+        }
+        .button-royal, .button-royal-flat {
+            background-color: #7B72E9;
+            border-color: #7B72E9;
+            color: #FFF;
+        }
+        #thisBtn:hover{
+            background-color:#7B72E9;
+        }
+        .button {
+            color: #666;
+            background-color: #EEE;
+            border-color: #EEE;
+            font-weight: 300;
+            font-size: 16px;
+            font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            text-decoration: none;
+            text-align: center;
+            line-height: 40px;
+            height: 40px;
+            padding: 0 40px;
+            margin: 0;
+            display: inline-block;
+            appearance: none;
+            cursor: pointer;
+            border: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition-property: all;
+            transition-property: all;
+            -webkit-transition-duration: .3s;
+            transition-duration: .3s;
+        }
+        .select {
+            height:40px;
+        }
+        .option {
+            padding:0 30px 0 10px;
+            min-height:40px;
+            display:flex;
+            align-items:center;
+            /*background:#333;*/
+            border-top:#222 solid 1px;
+            width: 100%;
+            pointer-events:none;
+            order:2;
+            z-index:1;
+            transition:background .4s ease-in-out;
+            box-sizing:border-box;
+            overflow:hidden;
+            white-space:nowrap;
+            height: 30px;
+
+        }
+        span{
+            font-size: 16px;
+            padding: 0 10px;
+        }
+        .select:focus .option {
+            position:relative;
+            pointer-events:all;
+        }
+        .fixTp{
+            position: fixed;
+            left:40%;
+            top:50px;
+        }
+    </style>
+    <title>投票页面</title>
+</head>
+<body>
+<div id="app">
+    <!--<ul>-->
+        <!--<li v-for="(item,i) in categoryList">-->
+            <!--{{ item.id }},{{ item.docSubject }}-->
+        <!--</li>-->
+    <!--</ul>-->
+    <div id="main" style="width:50%;height:600px;float:left"></div>
+    <div id="main1" style="width: 50%;height:600px;float:right"></div>
+    <select name="" v-model="id" class="select">
+        <option v-for="(item,i) in categoryList" :value="item.id" class="option">{{ item.docSubject }}</option>
+    </select>
+    <!--<input v-model="id"/>-->
+    <a v-on:click="addVote" href="javascript:0"  class="button button-royal button-pill button-giant">添加</a>
+    <b style="color: red;">!请勿短时间多次点击按钮!</b>
+    <div>
+        <span style="display: contents;" >请输入添加分数密码：</span>
+        <input type="password" v-model="pwd"/>
+        <span style="display: contents;">请输入要添加的分数：</span>
+        <input v-model="addsub"/>
+        <a v-on:click="addSub" href="javascript:0"  class="button button-royal button-pill button-giant" style="font-size: 5px">添加分数</a>
+        <span style="display: contents;">请输入添加的平均分：</span>
+        <input v-model="addavg"/>
+        <a v-on:click="addAvg" href="javascript:0"  class="button button-royal button-pill button-giant" style="font-size: 5px">添加平均分</a>
+    </div>
+    <div>
+        <span style="display: contents;">请输入需要参加投票的人数:<br/>（用于计算平均分，不输入时默认以当前投票人数计算平均分，输入9999时：投票人数为全员）</span>
+        <input v-model="bodynum"/>
+    </div>
+
+
+
+<div class="fixTp">
+
+
+    <div id="mDiv4">
+        <input type="button" id="thisBtn"  class="button button-royal button-pill button-giant" value="开始倒计时"></input>
+    </div>
+    <div>
+        <i>60秒倒计时</i>
+        <div>
+            <span class="pk">
+                <p id="s3">60</p>
+                <p>秒</p>
+            </span>
+            <span class="mk">
+                <p id="m3">00</p>
+                <p>毫秒</p>
+            </span>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+<script type="text/javascript">
+    var vue = new Vue({
+        el:"#app",
+        data:{
+            upLoadClicktag : 0,
+            name:[],
+            avg:[],
+            sub:[],
+            categoryList:[],
+            id:'',
+            addavg:'',
+            bodynum:'',
+            addsub:'',
+            pwd:'',
+            // idList:['177297aaeb6f9b15c5dd70b42aea7056','177297dfc3a42862d530f4e40f2a8823','177297f1aea2141740d62444fd998d5f','1772981adec3b69a6959a4246999460d','17729829990c775cbfacfbc4936b7eda','17729835abdaf90afcb8e3d4056bfeae','177298454c745427fa60656457898b1a','17729856e231e64020edf484c9199132','17729866df1df45bd9345dd4aaa9ac87','17729874579f56fe7e23d7242cd903fa','1772988c93c6e01cb1d0af04230a836f','1772989f181c4313ae1e2b342e691d5d','177298ae3ea2582a100428a49e791119','177298bbad9a109b430eb974e73bf02d','177298caf511fe67be601554ba991bfc','177298d7f55540cd2cafaf847828a7c0']
+            // idList:['177430f9d19df698e5a6f3c4f98a0c63','1774319e40b3485fa89f50e4d5fbb2f5','17743315a6cd3bc5d818fb24faa9f0b8']
+            idList:[]
+        },
+        mounted() {
+            this.timer = setInterval(this.post, 2000);
+        },
+        methods: {
+            addVote() {
+                //第一次进来为true
+                var _this = this;
+                if (_this.upLoadClicktag == 0) {
+                    //改版变量
+                    _this.upLoadClicktag = 1;
+                    //此处写你要做的事情，操作DOM，发送ajax请求等等。
+                    this.idList.push(this.id)
+
+                    //3秒过后可以再次点击
+                    setTimeout(function () {
+                        _this.upLoadClicktag = 0
+                    }, 2000);
+                } else {
+                    alert('请勿频繁操作！');
+                }
+            },
+            addSub() {
+                //第一次进来为true
+                var _this = this;
+                if (_this.upLoadClicktag == 0) {
+                    //改版变量
+                    _this.upLoadClicktag = 1;
+                    //此处写你要做的事情，操作DOM，发送ajax请求等等。
+                    this.idList.push(this.id)
+                    axios.post("../addSub",{"pwd":_this.pwd,"addsub":_this.addsub,"id":_this.id})
+                        .then(function (res) {
+                            alert(res.data.msg)
+                        })
+                        .catch();
+
+                    //3秒过后可以再次点击
+                    setTimeout(function () {
+                        _this.upLoadClicktag = 0
+                    }, 2000);
+                } else {
+                    console.log('请勿频繁操作！');
+                }
+            },
+            addAvg() {
+                //第一次进来为true
+                var _this = this;
+                if (_this.upLoadClicktag == 0) {
+                    //改版变量
+                    _this.upLoadClicktag = 1;
+                    //此处写你要做的事情，操作DOM，发送ajax请求等等。
+                    this.idList.push(this.id)
+                    axios.post("../addAvg",{"pwd":_this.pwd,"addavg":_this.addavg,"id":_this.id})
+                        .then(function (res) {
+                            alert(res.data.msg)
+                        })
+                        .catch();
+
+                    //3秒过后可以再次点击
+                    setTimeout(function () {
+                        _this.upLoadClicktag = 0
+                    }, 2000);
+                } else {
+                    console.log('请勿频繁操作！');
+                }
+            },
+            post:function() {
+                var _this = this
+                axios.post("../voteList")
+                    .then(function (res) {
+                        _this.categoryList = res.data;
+                        // console.log(_this.categoryList)
+                    })
+                    .catch();
+                // console.log(_this.idList);
+                axios.post("../voteSub1",{"idList":_this.idList,"bodynum":_this.bodynum})
+                    .then(function (res) {
+                        // console.log(res);
+                        // _this.name.push(res.data.name);
+                        // _this.sub.push(res.data.sub);
+                        // _this.avg.push(res.data.avg);
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption({
+                            title: {
+                                text: '总分'
+                            },
+                            tooltip: {},
+                            legend: {
+                                data:['总分']
+                            },
+                            xAxis: {
+                                axisLabel:{
+                                    interval: 0,
+                                    formatter: function (value) {
+                                        //x轴的文字改为竖版显示
+                                        var str = value.split("");
+                                        return str.join("\n");
+                                    }
+                                },
+                                data: res.data.name
+                            },
+                            grid: { // 控制图的大小，调整下面这些值就可以，
+                                x: 40,
+                                x2: 100,
+                                y2: 300,// y2可以控制 X轴跟Zoom控件之间的间隔，避免以为倾斜后造成 label重叠到zoom上
+                            },
+                            yAxis: {},
+                            series: [{
+                                name: '总分',
+                                type: 'bar',
+                                barWidth: 30,
+                                data: res.data.sub,
+                                itemStyle: {
+                                    normal: {
+                                        label: {
+                                            show: true, //开启显示
+                                            position: 'top', //在上方显示
+                                            textStyle: { //数值样式
+                                                // color: 'white',
+                                                fontSize: 14
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                barGap: "-100%", /*这里设置包含关系，只需要这一句话*/
+                                name: '投票人数：',
+                                type: 'bar',
+                                barWidth: 30,
+                                label: {
+                                    normal: {
+                                        show: true,//是否显示
+                                        position: 'top',//文字位置
+                                        formatter: '{c}人'//c后面加单位
+
+                                    }
+                                },
+                                data:res.data.length
+                            }]
+                        });
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart1.setOption({
+                            title: {
+                                text: '平均分'
+                            },
+                            tooltip: {},
+                            legend: {
+                                data:['平均分']
+                            },
+                            xAxis: {
+                                axisLabel:{
+                                    interval: 0,
+                                    formatter: function (value) {
+                                        //x轴的文字改为竖版显示
+                                        var str = value.split("");
+                                        return str.join("\n");
+                                    }
+                                },
+                                data: res.data.name
+                            },
+                            grid: { // 控制图的大小，调整下面这些值就可以，
+                                x: 40,
+                                x2: 100,
+                                y2: 300,// y2可以控制 X轴跟Zoom控件之间的间隔，避免以为倾斜后造成 label重叠到zoom上
+                            },
+                            yAxis: {},
+                            series: [{
+                                name: '平均分',
+                                type: 'bar',
+                                barWidth: 30,
+                                data: res.data.avg,
+                                itemStyle: {
+                                    normal: {
+                                        label: {
+                                            show: true, //开启显示
+                                            position: 'top', //在上方显示
+                                            textStyle: { //数值样式
+                                                // color: 'white',
+                                                fontSize: 14
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                                {
+                                    barGap: "-100%", /*这里设置包含关系，只需要这一句话*/
+                                    name: '投票人数：',
+                                    type: 'bar',
+                                    barWidth: 30,
+                                    label: {
+                                        normal: {
+                                            show: true,//是否显示
+                                            position: 'top',//文字位置
+                                            formatter: '{c}人'//c后面加单位
+
+                                        }
+                                    },
+                                    data:res.data.length
+                                }]
+                        });
+                    })
+                    .catch();
+            }
+        }
+    })
+
+
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: '总分'
+        },
+        tooltip: {},
+        legend: {
+            data:['总分']
+        },
+        xAxis: {
+            data: ["name"]
+        },
+        yAxis: {},
+        series: [{
+            name: '总分',
+            type: 'bar',
+            data: [0]
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart1 = echarts.init(document.getElementById('main1'));
+
+    // 指定图表的配置项和数据
+    var option1 = {
+        title: {
+            text: '平均分'
+        },
+        tooltip: {},
+        legend: {
+            data:['平均分']
+        },
+        xAxis: {
+            data: ["name"]
+        },
+        yAxis: {},
+        series: [{
+            name: '平均分',
+            type: 'bar',
+            data: [0]
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart1.setOption(option1);
+</script>
+<script type="text/javascript">
+    var waitTime=60;
+    function clockTime(o) {
+        if (waitTime == 0) {
+            o.removeAttribute("disabled");
+            o.value="开始倒计时";
+            waitTime = 60;
+        } else {
+            o.setAttribute("disabled", true);
+            // o.value="执行中(" + waitTime + ")";
+            o.value="执行中";
+            waitTime--;
+            setTimeout(function() {
+                    clockTime(o)
+                },
+                1000)
+        }
+    }
+    document.getElementById("thisBtn").onclick=function()
+    {
+        clockTime(this);
+        var nes=parseInt(new Date().getTime()/1000)+60;
+        xcsoft.countdown(parseInt(nes)+'.3',function (time) {
+            document.getElementById("s3").innerHTML=time.secondZero
+            document.getElementById("m3").innerHTML=time.msecZero
+        })
+
+    }
+</script>
+<!--<script>-->
+    <!--function a() {-->
+        <!--var i = 0;-->
+        <!--if (i == 0) {-->
+            <!--alert(i);-->
+            <!--var tid=  setInterval(function() {-->
+                <!--++i;-->
+                <!--alert(i);-->
+                <!--if (i > 10) {-->
+                    <!--clearTimeout(tid);-->
+
+                <!--}-->
+            <!--}, 100);-->
+        <!--}-->
+    <!--}-->
+    <!--a();-->
+    <!--alert("last..");-->
+<!--</script>-->
+</body>
+</html>

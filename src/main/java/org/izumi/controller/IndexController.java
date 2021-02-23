@@ -106,7 +106,7 @@ public class IndexController {
         return "success";
     }
 
-    @RequestMapping("/imgRAR")
+    @RequestMapping(value = "/imgRAR",method = RequestMethod.POST)
     public String imgRAR(float qality,@RequestParam("file") MultipartFile file) {
         File filePath = new File(path);
         File f = new File(path+"1.jpg");
@@ -146,6 +146,16 @@ public class IndexController {
             e.printStackTrace();
         }
         return "index";
+    }
+
+    @RequestMapping("/2048")
+    public String game2048(){
+        return "game/2048/index";
+    }
+
+    @RequestMapping("/mine")
+    public String gamemine(){
+        return "game/mine/mine";
     }
 
 }
