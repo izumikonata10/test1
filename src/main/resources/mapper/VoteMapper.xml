@@ -49,7 +49,10 @@
 
     <select id="selectAllVote" resultMap="BaseResultMap1">
         select t1.fd_id fd_id,t1.fd_question_explain fd_question_explain,t1.doc_subject doc_subject
-        from km_pindagate_main t1 ORDER BY fd_id desc
+        from km_pindagate_main t1
+        where
+        t1.doc_create_time >= '2021-01-01'
+        ORDER BY fd_id desc
     </select>
 
 </mapper>

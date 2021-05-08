@@ -312,7 +312,6 @@
                             },
                             yAxis: {},
                             series: [{
-                                inverse: true, //反向排序
                                 name: '总分',
                                 type: 'bar',
                                 barWidth: 30,
@@ -352,6 +351,36 @@
                                 text: '平均分'
                             },
                             tooltip: {},
+                            toolbox:{
+                                //是否显示工具箱开关
+                                show: true,
+                                feature:{
+                                    //数据视图打开并允许编辑
+                                    dataView: {
+                                        readOnly: false,
+                                        optionToContent: function(opt) {
+                                            var axisData = opt.xAxis[0].data;
+                                            var series = opt.series;
+                                            var table = '<table style="user-select:text;width:100%;text-align:center"><tbody><tr>'
+                                                + '<td>项目</td>'
+                                                + '<td>' + series[0].name + '</td>'
+                                                + '<td>' + series[1].name + '</td>'
+                                                + '</tr>';
+                                            for (var i = 0, l = axisData.length; i < l; i++) {
+                                                table += '<tr>'
+                                                    + '<td>' + axisData[i] + '</td>'
+                                                    + '<td>' + series[0].data[i] + '</td>'
+                                                    + '<td>' + series[1].data[i] + '</td>'
+                                                    + '</tr>';
+                                            }
+                                            table += '</tbody></table>';
+                                            return table;
+                                        }
+                                    },
+                                    //保存为图片
+                                    // saveAsImage: {}
+                                }
+                            },
                             legend: {
                                 data:['平均分']
                             },

@@ -2,42 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20646645-9f18-4a74-8399-159965bc623a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/izumi/controller/VoteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/izumi/dao/KmVoteAvgMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/izumi/dao/KmVotePwdMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/izumi/dao/KmVoteSubMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/izumi/dao/VoteMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/izumi/model/KmVoteAvg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/izumi/model/KmVotePwd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/izumi/model/KmVoteSub.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/izumi/model/Score.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/izumi/model/Vote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/KmVoteAvgMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/KmVotePwdMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/KmVoteSubMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/VoteMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/game/2048/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/game/mine/mine.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/echarts/echarts.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/game/2048/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/game/mine/mine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/vue/axios.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/vue/timer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/vue/vue.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/game/2048/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/game/mine/mine.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/img/qcf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/vote/vote.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/vote/vote1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/izumi/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/izumi/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/izumi/utils/ImageCompressUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/izumi/utils/ImageCompressUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/VoteMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/VoteMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/vote/vote.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/vote/vote.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -67,8 +36,8 @@
       <file leaf-file-name="VoteController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/izumi/controller/VoteController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="195" column="47" selection-start-line="195" selection-start-column="47" selection-end-line="195" selection-end-column="47" />
+            <state relative-caret-position="1463">
+              <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,15 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/izumi/controller/IndexController.java">
+      <file leaf-file-name="VoteMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/izumi/dao/VoteMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="70" column="47" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1026#1047#1" expanded="true" />
-              </folding>
+            <state relative-caret-position="152">
+              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -92,58 +57,17 @@
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+            <state relative-caret-position="475">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/izumi/controller/IndexController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vote1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/vote/vote1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="130" column="89" selection-start-line="130" selection-start-column="89" selection-end-line="130" selection-end-column="89" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vote.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/vote/vote.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="316" column="44" lean-forward="true" selection-start-line="316" selection-start-column="44" selection-end-line="316" selection-end-column="44" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KmVoteAvg.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/izumi/model/KmVoteAvg.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KmVoteSubMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/izumi/dao/KmVoteSubMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            <state relative-caret-position="2014">
+              <caret line="125" column="23" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,22 +75,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VoteMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/VoteMapper.xml">
+      <file leaf-file-name="ImageCompressUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/izumi/utils/ImageCompressUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+            <state relative-caret-position="2204">
+              <caret line="129" column="33" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KmVoteSubMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/KmVoteSubMapper.xml">
+      <file leaf-file-name="test.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="57">
+              <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1349">
+              <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+            </state>
+          </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
         </entry>
       </file>
     </leaf>
@@ -184,8 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>go</find>
-      <find>click</find>
       <find>开始</find>
       <find>177298ae3ea2582a100428a49e791119</find>
       <find>1.7</find>
@@ -214,6 +146,8 @@
       <find>categoryList</find>
       <find>不输入时默认投票人数为全员，输入9999时：以当前投票人数计</find>
       <find>392</find>
+      <find>qality</find>
+      <find>compressPictureByQality</find>
     </findStrings>
     <replaceStrings>
       <replace>img/game/mine/res</replace>
@@ -255,7 +189,6 @@
         <option value="$PROJECT_DIR$/src/main/java/org/izumi/dao/ZhaoMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/izumi/service/IIndexService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/izumi/service/impl/IndexServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/izumi/utils/ImageCompressUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/live2d/demo.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/live2d/assets/waifu-tips.json" />
         <option value="$PROJECT_DIR$/src/main/resources/static/live2d/demo3-waifu-tips.html" />
@@ -276,7 +209,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/game/2048/index.html" />
         <option value="$PROJECT_DIR$/ip.log" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-        <option value="$PROJECT_DIR$/src/test/java/test.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/vue/timer.js" />
         <option value="$PROJECT_DIR$/src/main/java/org/izumi/model/Vote.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/izumi/model/Score.java" />
@@ -288,7 +220,6 @@
         <option value="$PROJECT_DIR$/src/main/java/org/izumi/dao/VoteMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/izumi/dao/KmVoteSubMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/vote/h.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/VoteMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/izumi/dao/KmVotePwdMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/izumi/model/KmVotePwd.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/KmVotePwdMapper.xml" />
@@ -296,9 +227,12 @@
         <option value="$PROJECT_DIR$/src/main/java/org/izumi/controller/IndexController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/vote/vote1.html" />
         <option value="$PROJECT_DIR$/src/main/java/org/izumi/controller/VoteController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/vote/vote.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/VoteMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/izumi/utils/ImageCompressUtil.java" />
+        <option value="$PROJECT_DIR$/src/test/java/test.java" />
       </list>
     </option>
   </component>
@@ -334,7 +268,6 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -348,9 +281,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -411,7 +344,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="izumi" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="izumi" type="b2602c69:ProjectViewProjectNode" />
@@ -421,7 +354,18 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="izumi" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="izumi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="izumi" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="izumi" type="b2602c69:ProjectViewProjectNode" />
@@ -429,14 +373,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="izumi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springboot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="izumi" type="b2602c69:ProjectViewProjectNode" />
@@ -463,6 +399,19 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="vote" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="izumi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="izumi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -471,6 +420,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
@@ -480,7 +435,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.30392158" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2018.1.6\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -518,7 +473,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.IzumiApplication (1)">
+  <component name="RunManager" selected="Spring Boot.IzumiApplication">
     <configuration name="IzumiApplication (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.izumi.IzumiApplication" />
       <module name="springboot" />
@@ -587,8 +542,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.IzumiApplication (1)" />
         <item itemvalue="Application.test" />
+        <item itemvalue="Application.IzumiApplication (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -636,7 +591,16 @@
       <workItem from="1611018802423" duration="139422000" />
       <workItem from="1612141686008" duration="102838000" />
       <workItem from="1613609786031" duration="20490000" />
-      <workItem from="1613962270790" duration="18903000" />
+      <workItem from="1613962270790" duration="20766000" />
+      <workItem from="1614057057892" duration="13980000" />
+      <workItem from="1614560009555" duration="29282000" />
+      <workItem from="1614931122294" duration="11005000" />
+      <workItem from="1615251170836" duration="28848000" />
+      <workItem from="1616807914002" duration="27665000" />
+      <workItem from="1617669015253" duration="4471000" />
+      <workItem from="1617842983455" duration="20282000" />
+      <workItem from="1618188644901" duration="48486000" />
+      <workItem from="1619422831521" duration="19155000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1595982000933</created>
@@ -694,19 +658,26 @@
       <option name="project" value="LOCAL" />
       <updated>1600820125056</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="izumi_v1.34&#10;添加依赖↓：解决了html严格检查SAXParseException异常，新增没什么用的投票系统&#10;&lt;dependency&gt;&#10;            &lt;groupId&gt;net.sourceforge.nekohtml&lt;/groupId&gt;&#10;            &lt;artifactId&gt;nekohtml&lt;/artifactId&gt;&#10;            &lt;version&gt;1.9.22&lt;/version&gt;&#10;&lt;/dependency&gt;">
+      <created>1614051116967</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1614051116967</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="491217000" />
+    <option name="totallyTimeSpent" value="696254000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.50053304" side_tool="true" weight="0.32922733" />
-      <window_info anchor="bottom" id="JRebel Console" order="13" sideWeight="0.1444563" side_tool="true" visible="true" weight="0.22956327" />
+      <window_info active="true" anchor="bottom" id="JRebel Console" order="13" sideWeight="0.14712153" side_tool="true" visible="true" weight="0.25979844" />
       <window_info anchor="right" id="Redis Servers" order="9" />
       <window_info anchor="right" id="Maven Projects" order="5" weight="0.32995737" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
@@ -719,18 +690,17 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.25195968" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" weight="0.25195968" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49946696" weight="0.32922733" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4989339" weight="0.15677492" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.85554373" visible="true" weight="0.22956327" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.85287845" weight="0.25979844" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21375267" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23400854" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info id="JRebel" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -739,6 +709,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" order="18" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49946696" weight="0.32922733" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.32922733" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -759,29 +730,15 @@
     <MESSAGE value="izumi_v1.22&#10;live2d样式修改  按钮bug修复" />
     <MESSAGE value="izumi_v1.23&#10;前端该怎么设计呢，我也不知道，写了个思路&#10;新增访问者ip获取" />
     <MESSAGE value="izumi_v1.24&#10;github报安全警报，所以我修复了" />
-    <option name="LAST_COMMIT_MESSAGE" value="izumi_v1.24&#10;github报安全警报，所以我修复了" />
+    <MESSAGE value="izumi_v1.34&#10;添加依赖↓：解决了html严格检查SAXParseException异常，新增没什么用的投票系统&#10;&lt;dependency&gt;&#10;            &lt;groupId&gt;net.sourceforge.nekohtml&lt;/groupId&gt;&#10;            &lt;artifactId&gt;nekohtml&lt;/artifactId&gt;&#10;            &lt;version&gt;1.9.22&lt;/version&gt;&#10;&lt;/dependency&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="izumi_v1.34&#10;添加依赖↓：解决了html严格检查SAXParseException异常，新增没什么用的投票系统&#10;&lt;dependency&gt;&#10;            &lt;groupId&gt;net.sourceforge.nekohtml&lt;/groupId&gt;&#10;            &lt;artifactId&gt;nekohtml&lt;/artifactId&gt;&#10;            &lt;version&gt;1.9.22&lt;/version&gt;&#10;&lt;/dependency&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="46" />
+      <option name="time" value="51" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/game/mine/mine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6707">
-          <caret line="353" column="6" selection-start-line="353" selection-start-column="6" selection-end-line="353" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.m2/repository/org/springframework/boot/spring-boot-dependencies/1.5.1.RELEASE/spring-boot-dependencies-1.5.1.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="1160" column="54" lean-forward="true" selection-start-line="1160" selection-start-column="54" selection-end-line="1160" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/build/build.js" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/game/2048/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1463">
@@ -837,13 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
           <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -947,13 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/izumi/dao/VoteMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/vote/h.html" />
     <entry file="file://$PROJECT_DIR$/src/main/java/org/izumi/model/KmVotePwd.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -994,9 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1004,20 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
           <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/KmVoteAvgMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="27" column="67" lean-forward="true" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/VoteMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1051,55 +977,99 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/vote/vote1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
+        <state relative-caret-position="2470">
           <caret line="130" column="89" selection-start-line="130" selection-start-column="89" selection-end-line="130" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/KmVoteAvgMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="72" selection-start-line="13" selection-start-column="72" selection-end-line="13" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/4.3.6.RELEASE/spring-web-4.3.6.RELEASE.jar!/org/springframework/web/multipart/MultipartFile.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Java/jdk1.8.0_171/src.zip!/javax/imageio/ImageIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="1332" column="30" lean-forward="true" selection-start-line="1332" selection-start-column="30" selection-end-line="1332" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/izumi/controller/VoteController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="195" column="47" selection-start-line="195" selection-start-column="47" selection-end-line="195" selection-end-column="47" />
+        <state relative-caret-position="1463">
+          <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/izumi/controller/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="70" column="47" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
+        <state relative-caret-position="2014">
+          <caret line="125" column="23" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1026#1047#1" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/izumi/utils/ImageCompressUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2204">
+          <caret line="129" column="33" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/VoteMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/vote/vote.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="316" column="44" lean-forward="true" selection-start-line="316" selection-start-column="44" selection-end-line="316" selection-end-column="44" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="722">
+          <caret line="273" column="64" lean-forward="true" selection-start-line="273" selection-start-column="64" selection-end-line="273" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1349">
+          <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/izumi/dao/VoteMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
         </state>
       </provider>
     </entry>
